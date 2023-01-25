@@ -2,7 +2,7 @@
 - 👀 I’m interested in learning everything I can
 - 🌱 I’m currently learning a lot of things
 - 💞️ I’m looking to collaborate on nothing right now
-- 📫 How to reach me ? I don't really know
+- 📫 How to reach me ? I don't really know, on Instagram maybe !
 
 <!---
 77Aymeric/77Aymeric is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
