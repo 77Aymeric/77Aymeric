@@ -6,13 +6,13 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/esiee-dark.svg" />
     <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_RVB.jpg" />
-    <img src="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_RVB.jpg" height="74" alt="ESIEE Paris" />
+    <img src="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_RVB.jpg" width="250" alt="ESIEE Paris" />
   </picture>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/ds-dark.svg" />
     <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" />
-    <img src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" height="66" alt="Dassault Systemes" />
+    <img src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" width="300" alt="Dassault Systemes" />
   </picture>
 </p>
 
