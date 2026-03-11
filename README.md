@@ -1,112 +1,118 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:0ea5e9,100:22d3ee&height=220&section=header&text=Aymeric&fontSize=50&fontColor=ffffff&desc=Interactive%203D%20graphics%20%7C%20Creative%20web%20experiences%20%7C%20Useful%20tooling&descAlignY=62" alt="Aymeric banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0f172a,100:16a34a&height=180&section=header&text=Aymeric&fontSize=50&fontColor=ffffff&desc=Three.js%20%7C%20Unity%20%7C%20Python%20%7C%20Real-time%203D&descAlignY=64" alt="Aymeric banner" />
 </p>
+
+<h1 align="center">Aymeric</h1>
 
 <p align="center">
-  Creative developer from France building interactive 3D experiences, web interfaces with personality, and tools that turn raw data into something explorable.
+  Computer science student at ESIEE Paris and apprentice at Dassault Systèmes.<br />
+  I build real-time 3D projects, interactive web experiences, and practical developer tools.
 </p>
 
-<p align="center">
-  <a href="https://aymericletellier.com">Portfolio</a> |
-  <a href="https://aymericletellier.com/game/">Play GameFolio</a> |
-  <a href="https://www.linkedin.com/in/aymeric-letellier">LinkedIn</a> |
-  <a href="mailto:aymeric.letellier@edu.esiee.fr">Email</a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="140">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" height="24" alt="France flag" /><br />
+      <sub>France</sub>
+    </td>
+    <td align="center" width="220">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_BLANC.png">
+        <img src="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_RVB.jpg" height="34" alt="ESIEE Paris logo">
+      </picture><br />
+      <sub>ESIEE Paris</sub>
+    </td>
+    <td align="center" width="220">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_white.svg">
+        <img src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" height="30" alt="Dassault Systèmes logo">
+      </picture><br />
+      <sub>Dassault Systèmes</sub>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/France-111827?style=for-the-badge" alt="France" />
-  <img src="https://img.shields.io/badge/ESIEE%20Paris-111827?style=for-the-badge" alt="ESIEE Paris" />
-  <img src="https://img.shields.io/badge/Currently%20at-Dassault%20Systemes-0ea5e9?style=for-the-badge" alt="Dassault Systemes" />
-</p>
-
-```js
-const aymeric = {
-  location: "France",
-  studying: "ESIEE Paris",
-  currentlyAt: "Dassault Systemes",
-  focus: [
-    "Three.js and real-time 3D",
-    "interactive websites that feel closer to games",
-    "Unity experiments with strong atmosphere",
-    "tools that make technical data easier to explore"
-  ]
-};
-```
-
-## What I like building
-
-- Interactive experiences that do more than scroll.
-- Real-time 3D systems: procedural generation, vehicle physics, shaders, editors, and worldbuilding.
-- Small tools that solve a concrete problem and still feel polished.
-
-## Featured work
+## GitHub snapshot
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">GameFolio</h3>
-      <p>
-        A playable portfolio built as a Three.js open world. It includes an infinite procedural city, vehicle physics, a minimap with pathfinding, weather, a day/night cycle, mobile controls, and custom in-world project navigation.
-      </p>
-      <p align="center">
-        <a href="https://aymericletellier.com/game/">Live</a> |
-        <a href="https://github.com/77Aymeric/GameFolio">Repo</a>
-      </p>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=77Aymeric&show_icons=true&hide_border=true&bg_color=00000000&title_color=ffffff&text_color=cbd5e1&icon_color=22c55e&ring_color=22c55e&include_all_commits=true&rank_icon=github&custom_title=GitHub%20overview">
+        <img src="https://github-readme-stats.vercel.app/api?username=77Aymeric&show_icons=true&hide_border=true&bg_color=00000000&title_color=111827&text_color=334155&icon_color=16a34a&ring_color=16a34a&include_all_commits=true&rank_icon=github&custom_title=GitHub%20overview" alt="GitHub overview" />
+      </picture>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">Liminight</h3>
-      <p>
-        A psychological horror game co-built in Unity at ESIEE Paris. The project focuses on liminal spaces, sound design, narrative tension, and atmosphere-first gameplay rather than UI-heavy interaction.
-      </p>
-      <p align="center">
-        <a href="https://www.youtube.com/watch?v=GeBfnXJDre0">Video</a> |
-        <a href="https://github.com/Zedoww/Liminight">Repo</a>
-      </p>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=77Aymeric&layout=compact&hide_border=true&bg_color=00000000&title_color=ffffff&text_color=cbd5e1&langs_count=8&size_weight=0.5&count_weight=0.5">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=77Aymeric&layout=compact&hide_border=true&bg_color=00000000&title_color=111827&text_color=334155&langs_count=8&size_weight=0.5&count_weight=0.5" alt="Top languages" />
+      </picture>
+    </td>
+  </tr>
+</table>
+
+## Selected projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>GameFolio</h3>
+      <p>Three.js open-world portfolio with procedural city generation, vehicle physics, minimap pathfinding, weather, mobile controls, and custom project navigation.</p>
+      <p><sub>Three.js · JavaScript · WebGL · Vite</sub></p>
+      <p><a href="https://github.com/77Aymeric/GameFolio">Repo</a> · <a href="https://aymericletellier.com/game/">Live</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Liminight</h3>
+      <p>Psychological horror game built in Unity at ESIEE Paris, centered on liminal spaces, sound design, narrative tension, and atmosphere-first gameplay.</p>
+      <p><sub>Unity · C# · Blender · Final Cut Pro</sub></p>
+      <p><a href="https://github.com/Zedoww/Liminight">Repo</a> · <a href="https://www.youtube.com/watch?v=GeBfnXJDre0">Video</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">DashCam GPS Extractor</h3>
-      <p>
-        A Python project that extracts embedded GPS data from dashcam videos, estimates longitudinal g-forces, and generates maps, charts, exports, and a dashboard to inspect driving sessions.
-      </p>
-      <p align="center">
-        <a href="https://github.com/77Aymeric/DashCam_GPS_extractor">Repo</a>
-      </p>
+      <h3>DashCam GPS Extractor</h3>
+      <p>Python CLI and web tool that extracts GPS traces from dashcam files, computes longitudinal g-forces, and generates maps, plots, and batch reports.</p>
+      <p><sub>Python · FastAPI · Plotly · Leaflet</sub></p>
+      <p><a href="https://github.com/77Aymeric/DashCam_GPS_extractor">Repo</a></p>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">Three.js 3D Editor</h3>
-      <p>
-        A modular editor for building and exporting 3D scenes. It was created to speed up iteration on custom models and interactive web experiments, especially around GameFolio.
-      </p>
-      <p align="center">
-        <a href="https://github.com/77Aymeric/threejs-3d-editor">Repo</a>
-      </p>
+      <h3>Three.js 3D Editor</h3>
+      <p>Modular editor for building and exporting 3D scenes faster, created to support custom web-based 3D workflows and model iteration.</p>
+      <p><sub>Three.js · JavaScript · Vite · Tailwind</sub></p>
+      <p><a href="https://github.com/77Aymeric/threejs-3d-editor">Repo</a></p>
     </td>
   </tr>
 </table>
 
 ## Toolbox
 
+**3D / web**
+
 <p>
-  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Astro" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity" />
-  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
-  <img src="https://img.shields.io/badge/Blender-E87D0D?style=for-the-badge&logo=blender&logoColor=white" alt="Blender" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://skillicons.dev/icons?i=threejs,unity,blender,astro,js,html,css,vite" alt="3D and web tools" />
 </p>
 
-## Reach out
+**AI / APIs**
 
-If you want to talk about Three.js, game development, procedural generation, creative interfaces, or building something a bit less standard than the average landing page, feel free to reach out.
+<p>
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
+  <img src="https://img.shields.io/badge/Ollama-111111?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
+  <img src="https://img.shields.io/badge/OpenRouter-6B5CFF?style=flat-square&logo=openrouter&logoColor=white" alt="OpenRouter" />
+  <img src="https://img.shields.io/badge/Google%20AI%20Studio-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google AI Studio" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+</p>
 
-<p align="center">
-  <a href="https://github.com/77Aymeric"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+**Apps / tooling**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=docker,postman,androidstudio,xcode,git" alt="Apps and tooling" />
+  <img src="https://img.shields.io/badge/Final%20Cut%20Pro-111111?style=flat-square&logo=apple&logoColor=white" alt="Final Cut Pro" />
+</p>
+
+## Contact
+
+<p>
+  <a href="https://aymericletellier.com"><img src="https://img.shields.io/badge/Portfolio-111827?style=for-the-badge" alt="Portfolio" /></a>
   <a href="https://www.linkedin.com/in/aymeric-letellier"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:aymeric.letellier@edu.esiee.fr"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
