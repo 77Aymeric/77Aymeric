@@ -15,54 +15,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch streak stats data
-        run: curl -fsSL "https://streak-stats.demolab.com/?user=77Aymeric&type=json" -o stats.json
+      - name: Generate profile cards
+        run: python3 scripts/generate_profile_cards.py
 
-      - name: Generate profile stats card
+      - name: Commit updated cards
         run: |
-          mkdir -p assets
-          python <<'PY'
-          import json
-          from pathlib import Path
-
-          data = json.loads(Path('stats.json').read_text(encoding='utf-8'))
-          months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-          def fmt(date_str: str) -> str:
-              year, month, day = map(int, date_str.split('-'))
-              return f"{months[month - 1]} {day}, {year}"
-
-          svg = f'''<svg width="920" height="236" viewBox="0 0 920 236" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-            <title id="title">Aymeric GitHub activity</title>
-            <desc id="desc">Total contributions {data['totalContributions']} since {fmt(data['firstContribution'])}. Current streak {data['currentStreak']['length']} days from {fmt(data['currentStreak']['start'])} to {fmt(data['currentStreak']['end'])}. Longest streak {data['longestStreak']['length']} days from {fmt(data['longestStreak']['start'])} to {fmt(data['longestStreak']['end'])}.</desc>
-            <rect x="1" y="1" width="918" height="234" rx="22" fill="#020617" stroke="#1E293B" stroke-width="2"/>
-            <rect x="34" y="34" width="112" height="4" rx="2" fill="#60A5FA"/>
-            <text x="34" y="78" fill="#60A5FA" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="24" font-weight="700">GitHub Activity</text>
-            <line x1="306" y1="116" x2="306" y2="198" stroke="#1E293B" stroke-width="2"/>
-            <line x1="612" y1="116" x2="612" y2="198" stroke="#1E293B" stroke-width="2"/>
-            <text x="44" y="128" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="17" font-weight="600">Total Contributions</text>
-            <text x="44" y="174" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="42" font-weight="700">{data['totalContributions']}</text>
-            <text x="44" y="202" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">Since {fmt(data['firstContribution'])}</text>
-            <text x="350" y="128" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="17" font-weight="600">Current Streak</text>
-            <text x="350" y="174" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="42" font-weight="700">{data['currentStreak']['length']} days</text>
-            <text x="350" y="202" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">{fmt(data['currentStreak']['start'])} - {fmt(data['currentStreak']['end'])}</text>
-            <text x="656" y="128" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="17" font-weight="600">Longest Streak</text>
-            <text x="656" y="174" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="42" font-weight="700">{data['longestStreak']['length']} days</text>
-            <text x="656" y="202" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">{fmt(data['longestStreak']['start'])} - {fmt(data['longestStreak']['end'])}</text>
-          </svg>'''
-
-          Path('assets/profile-stats.svg').write_text(svg + '\n', encoding='utf-8')
-          PY
-
-      - name: Commit updated card
-        run: |
-          if git diff --quiet -- assets/profile-stats.svg; then
+          if [ -z "$(git status --porcelain -- assets/profile-stats-dark.svg assets/profile-stats-light.svg assets/contribution-heatmap-dark.svg assets/contribution-heatmap-light.svg)" ]; then
             echo "No changes"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/profile-stats.svg
-          git commit -m "chore: update profile stats"
+          git add assets/profile-stats-dark.svg assets/profile-stats-light.svg assets/contribution-heatmap-dark.svg assets/contribution-heatmap-light.svg
+          git commit -m "chore: update profile activity cards"
           git push

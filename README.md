@@ -4,15 +4,15 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/esiee-dark.svg" />
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/esiee-light.svg" />
-    <img src="./assets/esiee-light.svg" width="250" alt="ESIEE Paris" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/esiee-dark.png" />
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/esiee-light.png" />
+    <img src="./assets/esiee-light.png" width="320" alt="ESIEE Paris" />
   </picture>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/ds-dark.svg" />
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" />
-    <img src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" width="300" alt="Dassault Systemes" />
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/ds-light.svg" />
+    <img src="./assets/ds-light.svg" width="360" alt="Dassault Systemes" />
   </picture>
 </p>
 
@@ -26,9 +26,24 @@
 
 ## GitHub Activity
 
-<p align="center">
-  <img src="./assets/profile-stats.svg" alt="GitHub activity" />
-</p>
+<table align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="38%" valign="top" align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-stats-dark.svg" />
+        <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/profile-stats-light.svg" />
+        <img src="./assets/profile-stats-light.svg" width="360" alt="GitHub stats" />
+      </picture>
+    </td>
+    <td width="62%" valign="top" align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-heatmap-dark.svg" />
+        <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/contribution-heatmap-light.svg" />
+        <img src="./assets/contribution-heatmap-light.svg" width="560" alt="Contribution calendar" />
+      </picture>
+    </td>
+  </tr>
+</table>
 
 ## Toolbox
 
