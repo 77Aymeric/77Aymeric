@@ -34,23 +34,21 @@ jobs:
 
           svg = f'''<svg width="920" height="220" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
             <title id="title">Aymeric GitHub activity</title>
-            <desc id="desc">Total contributions {data['totalContributions']}. Current streak {data['currentStreak']['length']} days from {fmt(data['currentStreak']['start'])} to {fmt(data['currentStreak']['end'])}. Longest streak {data['longestStreak']['length']} days from {fmt(data['longestStreak']['start'])} to {fmt(data['longestStreak']['end'])}.</desc>
+            <desc id="desc">Total contributions {data['totalContributions']} since {fmt(data['firstContribution'])}. Current streak {data['currentStreak']['length']} days from {fmt(data['currentStreak']['start'])} to {fmt(data['currentStreak']['end'])}. Longest streak {data['longestStreak']['length']} days from {fmt(data['longestStreak']['start'])} to {fmt(data['longestStreak']['end'])}.</desc>
             <rect x="1" y="1" width="918" height="218" rx="22" fill="#020617" stroke="#1E293B" stroke-width="2"/>
-            <rect x="32" y="32" width="96" height="5" rx="2.5" fill="#60A5FA" fill-opacity="0.9"/>
-            <text x="32" y="68" fill="#60A5FA" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="24" font-weight="700">Aymeric's GitHub Activity</text>
-            <text x="32" y="104" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="18" font-weight="600">Total Contributions</text>
-            <text x="520" y="104" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="end">{data['totalContributions']}</text>
-            <text x="32" y="132" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">{fmt(data['firstContribution'])} - Present</text>
-            <line x1="32" y1="148" x2="520" y2="148" stroke="#1E293B" stroke-width="1"/>
-            <text x="32" y="178" fill="#CBD5E1" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="18" font-weight="600">Longest Streak</text>
-            <text x="520" y="178" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="end">{data['longestStreak']['length']} days</text>
-            <text x="32" y="206" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">{fmt(data['longestStreak']['start'])} - {fmt(data['longestStreak']['end'])}</text>
-            <line x1="588" y1="52" x2="588" y2="186" stroke="#1E293B" stroke-width="2"/>
-            <circle cx="750" cy="100" r="52" stroke="#1E293B" stroke-width="10"/>
-            <circle cx="750" cy="100" r="52" stroke="#60A5FA" stroke-width="10" stroke-linecap="round"/>
-            <text x="750" y="106" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle">{data['currentStreak']['length']}</text>
-            <text x="750" y="144" fill="#60A5FA" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Current Streak</text>
-            <text x="750" y="168" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13" text-anchor="middle">{fmt(data['currentStreak']['start'])} - {fmt(data['currentStreak']['end'])}</text>
+            <rect x="34" y="28" width="112" height="4" rx="2" fill="#60A5FA"/>
+            <text x="34" y="64" fill="#60A5FA" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="24" font-weight="700">GitHub Activity</text>
+            <line x1="306" y1="96" x2="306" y2="182" stroke="#1E293B" stroke-width="2"/>
+            <line x1="612" y1="96" x2="612" y2="182" stroke="#1E293B" stroke-width="2"/>
+            <text x="44" y="108" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="17" font-weight="600">Total Contributions</text>
+            <text x="44" y="154" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="42" font-weight="700">{data['totalContributions']}</text>
+            <text x="44" y="182" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">Since {fmt(data['firstContribution'])}</text>
+            <text x="350" y="108" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="17" font-weight="600">Current Streak</text>
+            <text x="350" y="154" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="42" font-weight="700">{data['currentStreak']['length']} days</text>
+            <text x="350" y="182" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">{fmt(data['currentStreak']['start'])} - {fmt(data['currentStreak']['end'])}</text>
+            <text x="656" y="108" fill="#94A3B8" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="17" font-weight="600">Longest Streak</text>
+            <text x="656" y="154" fill="#F8FAFC" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="42" font-weight="700">{data['longestStreak']['length']} days</text>
+            <text x="656" y="182" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="13">{fmt(data['longestStreak']['start'])} - {fmt(data['longestStreak']['end'])}</text>
           </svg>'''
 
           Path('assets/profile-stats.svg').write_text(svg + '\n', encoding='utf-8')
