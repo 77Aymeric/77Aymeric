@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/120px-Flag_of_France.svg.png" height="34" alt="France" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_RVB.jpg" height="44" alt="ESIEE Paris" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" height="40" alt="Dassault Systemes" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/120px-Flag_of_France.svg.png" height="38" alt="France" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://www.esiee.fr/fileadmin/user_upload/Fichiers/presse/logos-telechargement/Esiee_Paris_Tour_Eiffel_vecto_RVB.jpg" height="50" alt="ESIEE Paris" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://www.3ds.com/assets/3ds-navigation/3DS_corporate-logo_blue.svg" height="44" alt="Dassault Systemes" />
 </p>
 
 <p align="center">
@@ -15,13 +15,13 @@
 </p>
 
 <p align="center">
-  🇫🇷 French &nbsp;·&nbsp; 🇺🇸 English (C2) &nbsp;·&nbsp; 🇪🇸 Spanish (B1) &nbsp;·&nbsp; 🇨🇳 Currently learning Chinese
+  🇫🇷 French (native) &nbsp;·&nbsp; 🇺🇸 English (C2) &nbsp;·&nbsp; 🇪🇸 Spanish (B1) &nbsp;·&nbsp; 🇨🇳 Currently learning Chinese
 </p>
 
-## Stats
+## GitHub Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=77Aymeric&hide_border=true&background=0D1117&border=30363D&stroke=30363D&ring=60A5FA&fire=60A5FA&currStreakNum=F8FAFC&sideNums=F8FAFC&currStreakLabel=60A5FA&sideLabels=CBD5E1&dates=94A3B8&card_width=920&card_height=220" alt="GitHub streak and contribution stats" />
+  <img src="./assets/profile-stats.svg" alt="GitHub activity" />
 </p>
 
 ## Toolbox
