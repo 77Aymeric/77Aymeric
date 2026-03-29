@@ -1,6 +1,6 @@
 <svg width="360" height="236" viewBox="0 0 360 236" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Aymeric GitHub stats</title>
-  <desc id="desc">Total contributions 610 since Jan 5, 2022. Current streak 0 days from Mar 28, 2026 - Mar 28, 2026. Longest streak 29 days from Feb 26, 2026 - Mar 26, 2026.</desc>
+  <desc id="desc">Total contributions 610 since Jan 5, 2022. Current streak 0 days from Mar 29, 2026 - Mar 29, 2026. Longest streak 29 days from Feb 26, 2026 - Mar 26, 2026.</desc>
   <rect x="1" y="1" width="358" height="234" rx="22" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
   <rect x="28" y="26" width="92" height="5" rx="2.5" fill="#60A5FA"/>
   <text x="28" y="58" fill="#2563EB" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="22" font-weight="700">GitHub Stats</text>
@@ -12,7 +12,7 @@
 
   <text x="28" y="154" fill="#334155" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="14" font-weight="600">Current Streak</text>
   <text x="332" y="154" fill="#0F172A" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="end">0 days</text>
-  <text x="28" y="174" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="12">Mar 28, 2026 - Mar 28, 2026</text>
+  <text x="28" y="174" fill="#64748B" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="12">Mar 29, 2026 - Mar 29, 2026</text>
   <line x1="28" y1="186" x2="332" y2="186" stroke="#CBD5E1" stroke-width="1"/>
 
   <text x="28" y="210" fill="#334155" font-family="Segoe UI, Ubuntu, Arial, sans-serif" font-size="14" font-weight="600">Longest Streak</text>
