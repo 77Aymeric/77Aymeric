@@ -92,6 +92,10 @@ def load_heatmap_markup(theme: dict[str, str]) -> str:
     return inner
 
 
+def warn(message: str) -> None:
+    print(f"Warning: {message}", file=sys.stderr)
+
+
 def build_stats_card(theme_name: str, data: dict[str, object]) -> str:
     theme = THEMES[theme_name]
     current = data["currentStreak"]
@@ -143,28 +147,39 @@ def build_heatmap_card(theme_name: str, heatmap_markup: str) -> str:
 
 def main() -> None:
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
-    stats = load_stats()
+    try:
+        stats = load_stats()
+    except Exception as error:
+        stats = None
+        warn(f"unable to load streak stats ({error}); keeping existing profile stat cards.")
+
     stats_available = is_valid_stats(stats)
 
     if not stats_available:
-        keys = ", ".join(sorted(stats.keys())) if isinstance(stats, dict) else type(stats).__name__
-        print(
-            f"Warning: streak-stats returned an unexpected payload ({keys}); "
-            "keeping existing profile stat cards.",
-            file=sys.stderr,
-        )
+        if stats is not None:
+            keys = ", ".join(sorted(stats.keys())) if isinstance(stats, dict) else type(stats).__name__
+            warn(
+                f"streak-stats returned an unexpected payload ({keys}); "
+                "keeping existing profile stat cards."
+            )
 
     for theme_name in THEMES:
-        heatmap_markup = load_heatmap_markup(THEMES[theme_name])
+        try:
+            heatmap_markup = load_heatmap_markup(THEMES[theme_name])
+        except Exception as error:
+            warn(f"unable to load {theme_name} heatmap ({error}); keeping existing heatmap card.")
+            heatmap_markup = None
+
         if stats_available:
             (ASSETS_DIR / f"profile-stats-{theme_name}.svg").write_text(
                 build_stats_card(theme_name, stats),
                 encoding="utf-8",
             )
-        (ASSETS_DIR / f"contribution-heatmap-{theme_name}.svg").write_text(
-            build_heatmap_card(theme_name, heatmap_markup),
-            encoding="utf-8",
-        )
+        if heatmap_markup is not None:
+            (ASSETS_DIR / f"contribution-heatmap-{theme_name}.svg").write_text(
+                build_heatmap_card(theme_name, heatmap_markup),
+                encoding="utf-8",
+            )
 
 
 if __name__ == "__main__":
