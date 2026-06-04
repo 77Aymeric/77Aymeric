@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -58,6 +59,25 @@ def format_date(date_str: str) -> str:
 
 def load_stats() -> dict[str, object]:
     return json.loads(fetch_text(f"https://streak-stats.demolab.com/?user={USER}&type=json"))
+
+
+def is_valid_streak(streak: object) -> bool:
+    return (
+        isinstance(streak, dict)
+        and isinstance(streak.get("start"), str)
+        and isinstance(streak.get("end"), str)
+        and isinstance(streak.get("length"), int)
+    )
+
+
+def is_valid_stats(data: object) -> bool:
+    return (
+        isinstance(data, dict)
+        and isinstance(data.get("totalContributions"), int)
+        and isinstance(data.get("firstContribution"), str)
+        and is_valid_streak(data.get("currentStreak"))
+        and is_valid_streak(data.get("longestStreak"))
+    )
 
 
 def load_heatmap_markup(theme: dict[str, str]) -> str:
@@ -124,13 +144,23 @@ def build_heatmap_card(theme_name: str, heatmap_markup: str) -> str:
 def main() -> None:
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     stats = load_stats()
+    stats_available = is_valid_stats(stats)
+
+    if not stats_available:
+        keys = ", ".join(sorted(stats.keys())) if isinstance(stats, dict) else type(stats).__name__
+        print(
+            f"Warning: streak-stats returned an unexpected payload ({keys}); "
+            "keeping existing profile stat cards.",
+            file=sys.stderr,
+        )
 
     for theme_name in THEMES:
         heatmap_markup = load_heatmap_markup(THEMES[theme_name])
-        (ASSETS_DIR / f"profile-stats-{theme_name}.svg").write_text(
-            build_stats_card(theme_name, stats),
-            encoding="utf-8",
-        )
+        if stats_available:
+            (ASSETS_DIR / f"profile-stats-{theme_name}.svg").write_text(
+                build_stats_card(theme_name, stats),
+                encoding="utf-8",
+            )
         (ASSETS_DIR / f"contribution-heatmap-{theme_name}.svg").write_text(
             build_heatmap_card(theme_name, heatmap_markup),
             encoding="utf-8",
